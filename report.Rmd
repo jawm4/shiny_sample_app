@@ -1,0 +1,30 @@
+---
+title: "Report"
+author: "mj"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document
+---
+
+### Distribution
+
+```{r plot1, echo=FALSE, warning=FALSE}
+library(ggplot2)
+library(reshape)
+library(lattice)
+library(corrplot)
+library(knitr)
+params$a
+```
+
+### Correlation matrix
+
+```{r tab1, echo=FALSE}
+kable(params$b)
+```
+
+### Correlation plot
+
+```{r plot2, echo=FALSE}
+corrplot(params$b)
+```
